@@ -3,6 +3,7 @@ package pages;
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 public class AccessabilityPage {
   private   By AccessibilityNodeProviderButton =new AppiumBy.ByAccessibilityId("Accessibility Node Provider");
@@ -16,7 +17,9 @@ public class AccessabilityPage {
        return driver.findElement(AccessibilityNodeProviderButton).getText();
 
     }
-    public void clickOnQueryButton(){
+    public AccessabilityPage clickOnQueryButton(){
         driver.findElement(AccessibilityNodeQueryingButton).click();
+        return new AccessabilityPage(driver);
+
     }
 }

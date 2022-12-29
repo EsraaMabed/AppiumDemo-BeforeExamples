@@ -16,9 +16,10 @@ public class ViewPage {
         this.driver = driver;
     }
 
-    public void clickOnRadioPage(){
+    public   ViewPage clickOnRadioPage(){
         mobileActions=new MobileActions(driver);
         MobileActions.scrollDownToSpecificText("Radio Group");
         driver.findElement(RadioGroup).click();
+        return new ViewPage(driver);
     }
 }

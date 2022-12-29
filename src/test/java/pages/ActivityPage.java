@@ -11,8 +11,10 @@ public class ActivityPage {
     public ActivityPage(WebDriver driver) {
         this.driver = driver;
     }
-    public void clickOnCustomTitle(){
+    public CustomTitlePage clickOnCustomTitle(){
         driver.findElement(CustomTitle).click();
+        return new CustomTitlePage(driver);
+
     }
 
 }

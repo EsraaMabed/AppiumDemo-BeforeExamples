@@ -13,8 +13,9 @@ public class AppPage {
         this.driver = driver;
     }
 
-    public void clickOnAcivity() {
+    public ActivityPage clickOnAcivity() {
         driver.findElement(Activity).click();
+        return new ActivityPage(driver);
     }
 }
 

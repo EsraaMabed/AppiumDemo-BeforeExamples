@@ -16,17 +16,24 @@ public class Homepage {
     }
 
 
-    public void clickOnAccessability(){
+    public AccessabilityPage clickOnAccessability(){
         driver.findElement(Accessabilitybutton).click();
+        return new AccessabilityPage(driver);
     }
-    public void clickOnAppbutton(){
+    public AppPage clickOnAppbutton(){
         driver.findElement(Appbutton).click();
+        return new AppPage(driver);
+
     }
-    public void clickOnGraphicsbutton(){
+    public Graphicpage clickOnGraphicsbutton(){
         driver.findElement(Graphicsbutton).click();
+        return new Graphicpage(driver);
+
     }
-    public void clickOnviewsbutton(){
+    public ViewPage clickOnviewsbutton(){
         driver.findElement(Viewsbutton).click();
+        return new ViewPage(driver);
+
     }
 
 

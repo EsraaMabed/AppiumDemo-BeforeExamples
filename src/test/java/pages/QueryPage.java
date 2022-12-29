@@ -10,9 +10,12 @@ public class QueryPage {
     public QueryPage(WebDriver driver) {
         this.driver = driver;
     }
-    public void clickOnCheckBox(){
+    public QueryPage clickOnCheckBox()
+    {
         driver.findElement(CheckboxButton).click();
-        }
+        return new QueryPage(driver);
+
+    }
         public String checkStatus(){
       return   driver.findElement(CheckboxButton).getAttribute("checked");
     }

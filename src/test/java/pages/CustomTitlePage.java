@@ -11,6 +11,7 @@ public class CustomTitlePage {
 
 
     public CustomTitlePage(WebDriver driver) {
+
         this.driver = driver;
     }
     public void sendText(String name){
